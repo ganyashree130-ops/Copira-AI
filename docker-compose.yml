@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  backend:
+    build: ./backend
+    ports: ["8001:8001"]
+    environment:
+      - DATABASE_URL=sqlite:///./copyguard.db
+      - SECRET_KEY=change-me-in-production
+    volumes: [./backend:/app]
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports: ["5174:80"]
+    depends_on: [backend]
+    restart: unless-stopped

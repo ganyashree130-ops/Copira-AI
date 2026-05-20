@@ -1,0 +1,38 @@
+1. Prepare the Backend (FastAPI)
+Open your terminal and navigate to the backend folder.
+
+Create a Virtual Environment:
+
+//COMMAND 1
+>>python -m venv venv
+>>venv\Scripts\activate
+
+Install Dependencies:
+>>COMMAND 2
+pip install -r requirements.txt
+
+Start the Server:
+//COMMAND 3
+# From the 'backend' root directory
+uvicorn app.main:app --reload --port 8001
+The backend will now be live at http://localhost:8001.
+
+
+
+
+
+2. Prepare the Frontend (React + Vite)
+Open a second terminal window and navigate to the frontend folder.
+
+Install Node Packages:
+
+//COMMAND 4
+npm install
+Configure Environment Variables:
+
+
+Start the Development Server:
+
+//COMMAND 5
+npm run dev
+The frontend will usually be live at http://localhost:5173.
